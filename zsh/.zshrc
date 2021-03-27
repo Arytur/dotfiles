@@ -15,6 +15,10 @@ bindkey -M menuselect 'l' vi-forward-char
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+# remap clear terminal screen
+bindkey -r '^l'
+bindkey -r '^g'
+bindkey -s '^g' 'clear\n'
 
 # Autocompletion
 autoload -Uz compinit; compinit
